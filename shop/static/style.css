@@ -1,0 +1,17 @@
+p{
+    color: #222;
+}
+
+img{
+    height: 100px;
+}
+
+.card{
+    background-color: rgb(193, 193, 193);
+    border: 2px solid red;
+    border-radius: 30px;
+    padding: 10px;
+
+    text-align: center;
+    margin-top: 2%;
+}

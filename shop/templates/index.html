@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {% for item in Items %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ item.item_image }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Name - {{ item.item_name }}</h5>
+            <p class="card-text">Price - {{ item.item_price }}</p>
+            <p class="card-text">Quantity - {{ item.item_stock }}</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+    {% endfor %}
+
+
+    <form method="post">
+        <h2>Add a product</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add product">
+    </form>
+</body>
+
+</html>

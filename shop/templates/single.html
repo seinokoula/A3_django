@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Products</h2>
+    {% for item in Items %}
+    <ul>
+        <li><a href="{% url 'itemdetail' item.id %}">{{ item.item_stock }} </a></li>
+        <h5 class="card-title">Name - {{ item.item_name }}</h5>
+        <p class="card-text">Price - {{ item.item_price }}</p>
+        <p class="card-text">Quantity - {{ item.item_stock }}</p>
+    </ul>
+    {% endfor %}
+
+</body>
+</html>
