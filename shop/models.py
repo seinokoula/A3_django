@@ -15,3 +15,7 @@ class Items(models.Model):
 
 class ItemsModel:
     pass
+
+
+class ItemsForm:
+    pass
